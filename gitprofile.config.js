@@ -2,8 +2,8 @@
 
 const config = {
   github: {
-    username: 'Meheady', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
+    username: 'meheady', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
     limit: 8, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.

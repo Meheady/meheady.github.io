@@ -4,11 +4,11 @@ import { Brain, Database, Code, Server, CheckCircle2, Cpu, Cloud, GitBranch, Awa
 export const portfolioConfig = {
   // Personal Information
   personal: {
-    name: "Tahmid Rahman",
-    title: "AI Engineer",
-    company: "Brain Station 23",
-    tagline: "Transforming ideas into intelligent solutions through AI innovation",
-    email: "190041237tr@gmail.com",
+    name: "Md Meheady Hasan",
+    title: "Software Engineer",
+    company: "Mediasoft Data Systems Ltd",
+    tagline: "AI/ML Expert | Software Engineer",
+    email: "hmmehedi55@gmail.com",
     location: "Dhaka, Bangladesh",
     phone: "Available upon request",
     profileImage: "images/profileimage.jpg",
@@ -17,11 +17,11 @@ export const portfolioConfig = {
 
   // Social Links
   social: {
-    github: "https://github.com/TAHMID37",
-    linkedin: "https://www.linkedin.com/in/trahmanrifat/",
-    dailyDev: "https://app.daily.dev/tahmidrahman",
-    codeforces: "https://codeforces.com/profile/TAM",
-    instagram: "https://www.instagram.com/i.m.tahmid/"
+    github: "https://github.com/meheady",
+    linkedin: "https://www.linkedin.com/in/meheady/",
+    //dailyDev: "https://app.daily.dev/meheady",
+    //codeforces: "https://codeforces.com/profile/meheady",
+    //instagram: "https://www.instagram.com/i.m.meheady/"
   },
 
   // About Section
@@ -29,7 +29,7 @@ export const portfolioConfig = {
     title: "About Me",
     subtitle: "Passionate about transforming ideas into intelligent solutions",
     description: [
-      "As an AI/ML expert at Brain Station 23, I'm driven by the challenge of developing practical, client-centered solutions that create real impact. I lead projects with an ownership mindset, ensuring we deliver beyond technical requirements to provide genuine value.",
+      "As a Software Engineer at Mediasoft Data Systems Ltd, I'm driven by the challenge of developing practical, client-centered solutions that create real impact. I lead projects with an ownership mindset, ensuring we deliver beyond technical requirements to provide genuine value.",
       "My expertise in large language models (LLMs) and advanced AI technologies enables me to tackle complex challenges and drive innovation. I thrive in leadership roles, focusing on smooth delivery while effectively troubleshooting complicated issues."
     ],
     highlights: [
@@ -41,7 +41,7 @@ export const portfolioConfig = {
       {
         icon: "Briefcase",
         title: "Leadership",
-        description: "Leading projects with ownership mindset at Brain Station 23"
+        description: "Leading projects with ownership mindset at Mediasoft Data Systems Ltd"
       },
       {
         icon: "Code",
@@ -69,7 +69,7 @@ export const portfolioConfig = {
       {
         icon: "Code",
         title: "Programming",
-        skills: ["Python", "JavaScript", "TypeScript", "C++", "Java"]
+        skills: ["Python", "JavaScript", "PHP"]
       },
       {
         icon: "Database",
@@ -79,7 +79,7 @@ export const portfolioConfig = {
       {
         icon: "Cloud",
         title: "Tools & Platforms",
-        skills: ["Docker", "Git", "AWS", "Linux", "MLOps"]
+        skills: ["Docker", "Git", "AWS", "Linux"]
       }
     ]
   },
@@ -98,7 +98,7 @@ export const portfolioConfig = {
       {
         icon: "Layout",
         category: "Frameworks",
-        techs: ["Django", "FastAPI", "LangChain", "Crew-AI"],
+        techs: ["Laravel", "CodeIgniter", "Next.js", "React"],
         gradient: "from-purple-600/20 to-purple-400/20"
       },
       {

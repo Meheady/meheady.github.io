@@ -30,6 +30,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "vite build && gh-pages -d dist",
     "preview": "vite preview",
     "build:library": "vite build --config library.config.js",
     "lint": "eslint --ext .js,.jsx .",

@@ -21,9 +21,9 @@ export default defineConfig({
       },
       includeAssets: ['logo.png'],
       manifest: {
-        name: 'Portfolio',
-        short_name: 'Portfolio',
-        description: 'Personal Portfolio',
+        name: 'Meheady | Portfolio',
+        short_name: 'Meheady | Portfolio',
+        description: 'Meheady Personal Portfolio',
         icons: [
           {
             src: 'logo.png',

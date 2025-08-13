@@ -5,9 +5,9 @@ export const portfolioConfig = {
   // Personal Information
   personal: {
     name: "Md Meheady Hasan",
-    title: "Software Engineer",
+    title: "Software Engineer | AI/ML Enthusiast",
     company: "Mediasoft Data Systems Ltd",
-    tagline: "AI/ML Expert | Software Engineer",
+    tagline: "A mission to build impact full digital solutions. always learning, improving.",
     email: "hmmehedi55@gmail.com",
     location: "Dhaka, Bangladesh",
     phone: "Available upon request",

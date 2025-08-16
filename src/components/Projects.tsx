@@ -155,13 +155,13 @@ const ProjectCard = ({ project, theme }) => (
           <h3 className={`text-xl font-semibold text-gray-100 group-hover:text-blue-400 transition duration-300`}>
             {project.name}
           </h3>
-          <p className="text-sm text-gray-500 mt-1">
-            Updated {new Date(project.updated_at).toLocaleDateString()}
-          </p>
+          {/*<p className="text-sm text-gray-500 mt-1">*/}
+          {/*  Updated {new Date(project.updated_at).toLocaleDateString()}*/}
+          {/*</p>*/}
         </div>
         <a 
-          href={project.html_url}
-          target="_blank"
+          href={project?.html_url ?? "#"}
+          target={project?.html_url ?? "_blank"}
           rel="noopener noreferrer"
           className="p-2 rounded-full hover:bg-gray-800 transition duration-300"
         >
@@ -170,7 +170,7 @@ const ProjectCard = ({ project, theme }) => (
       </div>
 
       {/* Description */}
-      <p className="text-gray-400 mb-6 h-20 line-clamp-3">
+      <p className="text-gray-400 mb-6 h-60 line-clamp-9 text-justify">
         {project.description || 'No description available'}
       </p>
 
@@ -185,61 +185,134 @@ const ProjectCard = ({ project, theme }) => (
       )}
 
       {/* Stats */}
-      <div className="flex items-center space-x-6 text-sm text-gray-400">
-        <div className="flex items-center space-x-2">
-          <Star className="w-4 h-4 text-yellow-500" />
+      {(project?.stargazers_count || project?.forks_count || project?.size)  && <div className="flex items-center space-x-6 text-sm text-gray-400">
+        {project.stargazers_count && <div className="flex items-center space-x-2">
+          <Star className="w-4 h-4 text-yellow-500"/>
           <span>{project.stargazers_count}</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <GitFork className="w-4 h-4 text-blue-400" />
+        </div>}
+        {project.forks_count && <div className="flex items-center space-x-2">
+          <GitFork className="w-4 h-4 text-blue-400"/>
           <span>{project.forks_count}</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Code className="w-4 h-4 text-purple-400" />
+        </div>}
+        {project.size && <div className="flex items-center space-x-2">
+          <Code className="w-4 h-4 text-purple-400"/>
           <span>{project.size}KB</span>
-        </div>
-      </div>
+        </div>}
+      </div>}
 
       {/* Improved View Project Link */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+      {project?.html_url && <div
+          className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
         <div className="relative">
-          <div className={`absolute -inset-0.5 bg-gradient-to-r ${theme.primary} rounded-md blur opacity-75`} />
+          <div className={`absolute -inset-0.5 bg-gradient-to-r ${theme.primary} rounded-md blur opacity-75`}/>
           <a
-            href={project.html_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative flex items-center justify-center space-x-2 px-4 py-2.5 bg-gray-900 text-gray-100 rounded-md hover:text-white transition duration-300"
+              href={project.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex items-center justify-center space-x-2 px-4 py-2.5 bg-gray-900 text-gray-100 rounded-md hover:text-white transition duration-300"
           >
             <span className="font-medium">Explore Project</span>
-            <ExternalLink className={`w-4 h-4 ${theme.accent}`} />
+            <ExternalLink className={`w-4 h-4 ${theme.accent}`}/>
           </a>
         </div>
-      </div>
+      </div>}
     </div>
   </div>
 );
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
   const { currentTheme } = useTheme();
 
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${portfolioConfig.github.username}/repos`) // Use dynamic GitHub username from config
-      .then(response => response.json())
-      .then(data => {
-        const sortedProjects = data
-          .filter(project => !project.fork)
-          .sort((a, b) => b.stargazers_count - a.stargazers_count)
-          .slice(0, portfolioConfig.github.reposToShow);
-        setProjects(sortedProjects);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching projects:', error);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(`https://api.github.com/users/${portfolioConfig.github.username}/repos`) // Use dynamic GitHub username from config
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       const sortedProjects = data
+  //         .filter(project => !project.fork)
+  //         .sort((a, b) => b.stargazers_count - a.stargazers_count)
+  //         .slice(0, portfolioConfig.github.reposToShow);
+  //       setProjects(sortedProjects);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching projects:', error);
+  //       setLoading(false);
+  //     });
+  // }, []);
+
+
+  const projects = [
+    {
+      id: 2,
+      name: "E-commerce Platform",
+      description: "Developed full-featured e-commerce platform which is make sure maximise generate sale." +
+          "From admin panel manage every content on ecommerce. admin can enable disable feature as per needs. manage every operation like bulk product upload, variation of products," +
+          " discount , coupon , marketing tools , order process, update order, stock manage, different kind of report, advance dashboard ",
+      html_url: "",
+      language: "PHP, Laravel, Next JS, Radis, RabbitMQ, React Js",
+      stargazers_count: "",
+      forks_count: "",
+      size: "", // KB
+      updated_at: "2025-07-20T09:20:00Z"
+    },
+    {
+      id: 2,
+      name: "Order Management System",
+      description: "A comprehensive Order Management System that handles the entire order " +
+          "lifecycle—from placement to delivery. Features include courier integration, " +
+          "third-party fraud checks, customer behavior tracking, and history management." +
+          " It efficiently manages all order states including requisition, ready-for-delivery, " +
+          "delivery status, collection, returns, and partial or full cancellations.",
+      html_url: "",
+      language: "PHP, Laravel, Javascript",
+      stargazers_count: "",
+      forks_count: "",
+      size: "", // KB
+      updated_at: "2025-07-20T09:20:00Z"
+    },
+    {
+      id: 2,
+      name: "Inventory Management System",
+      description: "A robust Inventory Management System designed to efficiently handle" +
+          " all aspects of inventory operations. Features include inventory adjustments and logs, " +
+          "purchase orders and purchases, returns, and management of damaged or lost items. " +
+          "It also provides supplier management, account listing, payment type tracking, " +
+          "and comprehensive return reason management," +
+          " ensuring accurate stock control and streamlined operations.",
+      html_url: "",
+      language: "PHP, Laravel, Javascript",
+      stargazers_count: "",
+      forks_count: "",
+      size: "", // KB
+      updated_at: "2025-07-20T09:20:00Z"
+    },
+    {
+      id: 1,
+      name: "Website CMS",
+      description: "Built modern website content management system that using can do any operation very smoothly. " +
+          "",
+      html_url: "",
+      language: "PHP, Laravel, JavaScript, React JS",
+      stargazers_count: "",
+      forks_count: "",
+      size: "", // KB
+      updated_at: "2025-08-01T12:34:56Z"
+    },
+    {
+      id: 3,
+      name: "AI Chatbot",
+      description: "An AI-powered chatbot using Python, TensorFlow, and LLMs.",
+      html_url: "",
+      language: "Python",
+      stargazers_count: "",
+      forks_count: "",
+      size: "",
+      updated_at: "2025-08-10T15:00:00Z"
+    }
+  ];
+
 
   return (
     <section id="projects" className="py-20 relative">

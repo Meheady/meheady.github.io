@@ -114,7 +114,7 @@
 
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { CheckCircle2, Cpu, Code, Database, Cloud } from 'lucide-react';
+import {CheckCircle2, Cpu, Code, Database, Cloud, Package} from 'lucide-react';
 import { portfolioConfig } from '../config/portfolioConfig'; // Import portfolioConfig
 
 const SkillCard = ({ icon: Icon, title, skills, theme }) => (
@@ -196,7 +196,7 @@ const Skills = () => {
             // Map icons from string to actual component
             const Icon = category.icon === 'Cpu' ? Cpu : 
                         category.icon === 'Code' ? Code : 
-                        category.icon === 'Database' ? Database : 
+                        category.icon === 'Package' ? Package :
                         category.icon === 'Cloud' ? Cloud : null;
 
             return (

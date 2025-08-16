@@ -68,19 +68,26 @@ export const portfolioConfig = {
         skills: ["Python", "JavaScript", "PHP"]
       },
       {
+        icon: "Package",
+        title: "Software Expertise",
+        skills: [
+          "Web Applications",
+          "REST APIs",
+          "E-commerce Platforms",
+          "SaaS Applications",
+          "AI/ML-powered Tools",
+          "Data Analytics Dashboards"
+        ]
+      },
+      {
         icon: "Cpu",
         title: "AI/ML",
         skills: ["TensorFlow", "PyTorch", "Scikit-learn", "LLMs", "Computer Vision"]
       },
       {
-        icon: "Database",
-        title: "Data Science",
-        skills: ["Pandas", "NumPy", "Data Analysis", "Data Visualization"]
-      },
-      {
         icon: "Cloud",
         title: "Tools & Platforms",
-        skills: ["Docker", "Git", "AWS", "Linux"]
+        skills: ["RabbitMQ","Docker", "Git", "AWS", "Linux"]
       }
     ]
   },
@@ -94,7 +101,7 @@ export const portfolioConfig = {
       {
         icon: "Layout",
         category: "Frameworks",
-        techs: ["Laravel","FastAPI", "CodeIgniter", "Next.js", "React"],
+        techs: ["Laravel","FastAPI", "CodeIgniter", "Next JS", "React JS"],
         gradient: "from-purple-600/20 to-purple-400/20"
       },
       {
@@ -112,7 +119,7 @@ export const portfolioConfig = {
       {
         icon: "Database",
         category: "Databases",
-        techs: ["MySQL"],
+        techs: ["MySQL", "Radis"],
         gradient: "from-emerald-600/20 to-emerald-400/20"
       }
     ]

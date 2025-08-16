@@ -30,9 +30,15 @@ export const portfolioConfig = {
     subtitle: "Passionate about transforming ideas into intelligent solutions",
     description: [
       "As a Software Engineer at Mediasoft Data Systems Ltd, I'm driven by the challenge of developing practical, client-centered solutions that create real impact. I lead projects with an ownership mindset, ensuring we deliver beyond technical requirements to provide genuine value.",
-      "My expertise in large language models (LLMs) and advanced AI technologies enables me to tackle complex challenges and drive innovation. I thrive in leadership roles, focusing on smooth delivery while effectively troubleshooting complicated issues."
+
+      "3 Years in PHP Development, Laravel Framework, frontend technologies. Proficient in React JS, Next JS, API Integration, and networking. Experience in building responsive and user-friendly websites. Familiar with GitHub for version control and collaboration. 2.9 years of experience in IT support. Skilled in IT support, troubleshooting, and maintenance of computer systems."
     ],
     highlights: [
+      {
+        icon: "SquareCode",
+        title: "Software Expert",
+        description: "Experienced in developing robust software solutions using modern technologies."
+      },
       {
         icon: "Award",
         title: "AI/ML Expert",
@@ -41,17 +47,12 @@ export const portfolioConfig = {
       {
         icon: "Briefcase",
         title: "Leadership",
-        description: "Leading projects with ownership mindset at Mediasoft Data Systems Ltd"
-      },
-      {
-        icon: "Code",
-        title: "Innovation",
-        description: "Creating practical, client-centered AI solutions"
+        description: "Ability to lead projects with ownership mindset "
       },
       {
         icon: "BookOpen",
         title: "Continuous Learning",
-        description: "Staying current with latest AI/ML technologies and trends"
+        description: "Staying current with latest technologies and trends"
       }
     ]
   },
@@ -61,15 +62,15 @@ export const portfolioConfig = {
     title: "Skills & Expertise",
     subtitle: "Leveraging cutting-edge technologies to build innovative solutions",
     categories: [
+       {
+        icon: "Code",
+        title: "Programming",
+        skills: ["Python", "JavaScript", "PHP"]
+      },
       {
         icon: "Cpu",
         title: "AI/ML",
         skills: ["TensorFlow", "PyTorch", "Scikit-learn", "LLMs", "Computer Vision"]
-      },
-      {
-        icon: "Code",
-        title: "Programming",
-        skills: ["Python", "JavaScript", "PHP"]
       },
       {
         icon: "Database",
@@ -89,17 +90,18 @@ export const portfolioConfig = {
     title: "Tech Stack",
     subtitle: "Cutting-edge technologies I work with",
     categories: [
+      
+      {
+        icon: "Layout",
+        category: "Frameworks",
+        techs: ["Laravel","FastAPI", "CodeIgniter", "Next.js", "React"],
+        gradient: "from-purple-600/20 to-purple-400/20"
+      },
       {
         icon: "Brain",
         category: "AI/ML",
         techs: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"],
         gradient: "from-blue-600/20 to-blue-400/20"
-      },
-      {
-        icon: "Layout",
-        category: "Frameworks",
-        techs: ["Laravel", "CodeIgniter", "Next.js", "React"],
-        gradient: "from-purple-600/20 to-purple-400/20"
       },
       {
         icon: "MessageSquare",
@@ -110,7 +112,7 @@ export const portfolioConfig = {
       {
         icon: "Database",
         category: "Databases",
-        techs: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+        techs: ["MySQL"],
         gradient: "from-emerald-600/20 to-emerald-400/20"
       }
     ]

@@ -120,7 +120,7 @@
 
 
 import React from 'react';
-import { Award, Briefcase, Code, BookOpen } from 'lucide-react';
+import { Award, Briefcase, BookOpen, SquareCode } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { portfolioConfig } from '../config/portfolioConfig'; // Import portfolio config
 
@@ -135,7 +135,7 @@ const HighlightCard = ({ icon: Icon, title, description, currentTheme }) => (
     </div>
     <div>
       <h3 className="text-lg font-semibold text-gray-200 mb-1">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+      <p className="text-gray-400 text-justify">{description}</p>
     </div>
   </div>
 );
@@ -146,17 +146,17 @@ const About = () => {
   // Use portfolioConfig to dynamically populate highlights
   const highlights = [
     {
-      icon: Award,
+      icon: SquareCode,
       title: portfolioConfig.about.highlights[0].title,
       description: portfolioConfig.about.highlights[0].description,
     },
     {
-      icon: Briefcase,
+      icon: Award,
       title: portfolioConfig.about.highlights[1].title,
       description: portfolioConfig.about.highlights[1].description,
     },
     {
-      icon: Code,
+      icon: Briefcase,
       title: portfolioConfig.about.highlights[2].title,
       description: portfolioConfig.about.highlights[2].description,
     },
@@ -189,10 +189,10 @@ const About = () => {
           {/* Left content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed text-justify">
                 {portfolioConfig.about.description[0]}
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed text-justify">
                 {portfolioConfig.about.description[1]}
               </p>
             </div>
